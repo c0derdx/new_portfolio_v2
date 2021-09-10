@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: #14104B;
+    font-family: 'Montserrat', cursive;
+    color: #74809C;
+}
+
+.navbar , .footer__main{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    align-items: center;
+    color: #F54D71;
+    max-width: 1200px;
+    margin: auto;
+    font-size: 1.25rem;
+}
+
+.logo {
+    flex: 1;
+    font-size: 2.5rem;
+    background-color: #53EDFB;
+    background-image: linear-gradient(115deg, #53EDFB, #F54D71);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-size: 131px;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    font-family: 'Patua One', cursive;
+    letter-spacing: 1px;
+}
+
+.navbar > .navbar__links , .footer__main > .footer__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* font-size: 1.25rem; */
+}
+
+
+.navbar .navbar__links li , .footer__main .footer__links li{
+    width: 100%;
+    height: 100%;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar  .navbar__links li a, .footer__main .footer__links li a{
+    color: #74809C;
+    font-weight: bold;
+}
+
+.active::before {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 2px;
+    bottom: -20%;
+    left: 2%;
+    border-radius: 5px;
+    background-color: #F54D71;
+    color: #F54D71;
+}
+
+/* .navbar__links li a:hover::before, .footer__links li a:hover::before {
+    width: 0%;
+} */
+
+.navbar__links li a:hover::before, .footer__links li a:hover::before {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 2px;
+    bottom: -20%;
+    left: 2%;
+    border-radius: 5px;
+    background-color: #F54D71;
+    color: #F54D71;
+    /* transition: ease-in-out 5s; */
+    animation: hover 1s linear 1;
+}
+
+.active, .navbar__links li a:hover, .footer__links li a:hover {
+    color: #F54D71 !important;
+    transition: ease-in-out 1s;
+}
+
+button {
+    padding: 10px 30px;
+    outline: none;
+    background: #14104B;
+    color: #F54D71;
+    border: 1.5px solid #F54D71;
+    border-radius: 10px;
+    margin: -10px 0px 0px 10px;
+    font-size: 1.25rem
+}
+
+.home__container {
+    max-width: 1200px;
+    margin: 6.25rem auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-content: center;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h1 {
+    font-size: 4rem;
+    color: #EFF7FF;
+    line-height: 2;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+.home__right {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile__imageContainer {
+    flex: 0.95;
+}
+
+.profile__image {
+    width: 100%;
+    height: 100%;
+    border-radius:  0 50px 0 50px;
+}
+
+.btn__getInTouch {
+    margin: 2rem 0;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.social__bar {
+    transform: rotateZ(180deg);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.icons, .socialBar__line {
+    height: 24px;
+    margin: 0 10px;
+}
+
+.vertical__text {
+    writing-mode: vertical-lr;
+}
+
+.socialBar__line {
+    height: 2rem;
+    background-color: #74809C;
+    width: 0.1rem;
+}
+
+.blob {
+    position: absolute;
+    top: 0;
+}
+
+footer {
+    max-width: 1200px;
+    margin: auto;
+    height: 20vh;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.footer__main {
+    justify-content: space-between;
+    border-bottom: 1px solid #74809C;
+}
+
+.footer__main .logo{
+    flex: none;
+}
+
+.footer__icons {
+    transform: rotate(270deg);
+    width: 24px;
+}
+
+.copyright__div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 5vh;
+    width: 40%;
+    margin: auto;
+    font-weight: bold;
+}
+
+.triangle {
+    position: absolute;
+    width: 96px;
+    height: 72px;
+    animation: rotation 20s linear infinite;
+    transform-origin: center;
+    top: -40px;
+    left: -45px;
+}
+
+.square {
+    position: absolute;
+    width: 72px;
+    height: 96px;
+    transform-origin: center;
+    right: 0px;
+    z-index: -2;
+    animation: float 4s linear infinite;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate3d(-2,1,1, 0deg);
+    }
+    to {
+        transform: rotate3d(2,3,1, 360deg);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes hover {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 30%;
+    }
+}

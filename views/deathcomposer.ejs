@@ -1,0 +1,17 @@
+<%-include("partials/composerHeader")-%>
+<div class="home__container">
+  <h1>Compose</h1>
+<form action="/deathcomposer" method="post">
+    <div class="form-group">
+        <label class="form-label">Title</label>
+        <input type="text" name="projectTitle" class="form-control" autocomplete="off">
+        <label class="form-label">Image-Url</label>
+        <input type="text" name="imageUrl" class="form-control" autocomplete="off">
+        <label class="form-label">Post</label>
+        <textarea name="projectContent" class="form-control form-group" cols="30" rows="10"></textarea>
+        <button type="submit" name="button" class="btn btn-primary">publish</button>
+    </div>
+</form>
+</div>
+
+  <%-include("partials/composerFooter")-%>

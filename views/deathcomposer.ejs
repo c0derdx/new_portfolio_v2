@@ -1,6 +1,18 @@
 <%-include("partials/composerHeader")-%>
+<h1>Compose</h1>
 <div class="home__container">
-  <h1>Compose</h1>
+  <div class="projects__container">
+    <% projects.forEach(function(project) {%>
+      <a href="" class="project">
+          <img src= "<%=project.image %>"  alt="">
+          <div class="project__info">
+              <h3><%= project.title%></h3>
+              <p><%= project.content%></p>
+          </div>
+      
+      </a>
+  <% }) %>
+  </div>
 <form action="/deathcomposer" method="post">
     <div class="form-group">
         <label class="form-label">Title</label>

@@ -6,7 +6,6 @@ const { forEach } = require("lodash");
 const _ = require("lodash");
 
 const app = express();
-// let projects = [];
 
 
 app.set('view engine','ejs');
@@ -52,8 +51,13 @@ app.get("/contact", (req,res) => {
     res.render("contact");
 });
 
-app.get("/deathcomposer", (req,res) => {
-    res.render("deathcomposer");
+app.get("/deathcomposer", async (req,res) => {
+    // res.render("deathcomposer"); old code
+    //new code
+    await Project.find({}, function(err, foundItems) {
+        if (err) console.log(err);
+        else res.render("deathcomposer",{projects:foundItems});
+    });
 });
 
 app.post("/deathcomposer", function(req,res) {
@@ -67,9 +71,9 @@ const projectContent = req.body.projectContent;
         content: projectContent
     });
 
-    // projects.push(project);
     projectInfo.save();
-    res.redirect("/projects");
+    // res.redirect("/projects"); old code 
+    res.redirect("/deathcomposer");
 });
 
 app.get("/projects/:projectName", function(req,res){

@@ -1,0 +1,40 @@
+a:hover {
+    text-decoration: none;
+    color: #74809C;
+}
+
+h1{
+    text-align: center;
+}
+
+.composer__container {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.projects__container {
+    max-width: none !important;
+}
+
+.form__container {
+    margin: 5rem auto;
+}
+
+.project {
+    position: relative;
+}
+
+.delete {
+    padding: 5px;
+    outline: none;
+    background: #F54D71;
+    color: #14104B;
+    border: 0px;
+    margin: 0;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+}

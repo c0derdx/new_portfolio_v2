@@ -1,2 +1,19 @@
 <%-include("partials/contactHeader")-%>
-<%-include("partials/footer")-%>
+<div class="contact__container">
+    <div class="contact__left">
+        <form action="" method="post">
+            <li class="upperForm">
+            <input name="name" placeholder="Name" type="text" class="upperForm__left" autocomplete="off" required>
+            <input name="contact" placeholder="Contact no." type="text" class="upperForm__right" autocomplete="off" required>
+            </li>
+            <li><input name="email" placeholder="Email" type="email" autocomplete="off" required></li>
+            <li><input name="subject" placeholder="Subject" type="text" autocomplete="off" required></li>
+            <li><textarea name="message" placeholder="Message" id="" cols="30" rows="10" autocomplete="off" required></textarea></li>
+            <button type="submit" id="form__Send" class="form__send">Send message!</button>
+        </form>
+    </div>
+    <div class="contact__right">
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing</h1>
+    </div>
+</div>
+    <%-include("partials/footer")-%>

@@ -101,7 +101,7 @@ button {
     color: #F54D71;
     border: 1.5px solid #F54D71;
     /* border-radius: 10px; */
-    margin: -10px 0px 0px 10px;
+    /* margin: -10px 0px 0px 10px; */
     font-size: 1.25rem
 }
 
@@ -328,9 +328,6 @@ footer {
 }
 
 @media only screen and (max-width: 1200px) {
-    .navbar {
-        /* padding: 0 10px; */
-    }
 
     .logo {
         margin-left: 10px;
@@ -339,7 +336,12 @@ footer {
     .navbar button {
         margin-right: 10px;
     }
+
+    .home__container {
+        padding: 0 10px;
+    }
 }
+
 
 .nav-mobile {
     display: flex;
@@ -354,7 +356,11 @@ footer {
     top: 0;
     bottom: 0;
     overflow-y: scroll;
-    /* display: none; */
+    display: none;
+}
+
+.hamburger {
+    display: none;
 }
 
 
@@ -427,4 +433,84 @@ footer {
 .mobile-links a:hover::before {
     width: 100%;
     transition: all 0.5s;
+}
+
+@media screen and (max-width: 1050px) {
+
+    .copyright__div {
+        width: 50%;
+    }
+    
+}
+
+@media screen and (max-width: 1000px) {
+    
+    .home__container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    
+}
+
+@media screen and (max-width: 900px) {
+    
+    .navbar {
+        padding-left: 10px;
+        padding-top: 10px;
+        height: 60px;
+    }
+    
+    .hamburger {
+        display: block;
+        font-size: 2rem;
+        align-self: center;
+        margin-top: 0.3rem;
+    }
+    
+    .nav-mobile {
+        display: flex;
+    }
+    
+    .navbar>.navbar__links{
+        display: none;
+    }
+    
+    .home__left h1 {
+        font-size: 3rem;
+    }
+    
+    .home__left h2 {
+        font-size: 2rem;
+    }
+
+    .footer__main > .footer__links {
+        font-size: 1rem;
+    }
+    
+    .footer__main .footer__links li {
+        margin: 0 10px;
+    }
+
+    .copyright__div {
+        width: 60%;
+        font-size: 0.95rem;
+    }
+    
+}
+
+@media screen and (max-width: 700px) {
+
+    .footer {
+        position: static;
+        height: unset;
+    }
+
+    .footer__main {
+        height: unset;
+    }
+
+    .footer__main > .footer__links {
+        flex-direction: column;
+    }
+
 }

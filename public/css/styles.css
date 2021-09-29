@@ -435,6 +435,29 @@ footer {
     transition: all 0.5s;
 }
 
+.footerMobile__container {
+    display: none;
+    width: 100%;
+    background-color: #14104B;
+    padding: 0 10px;
+}
+
+.footerMobile__container a {
+    color: #74809C;
+}
+
+.footerLinks__mobile {
+    margin: 10px 0;
+    font-size: 0.95rem;
+}
+
+.copyrightDiv__mobile {
+    width: 100%;
+    font-size: 0.8rem;
+    text-align: left;
+    margin: 10px 0;
+}
+
 @media screen and (max-width: 1050px) {
 
     .copyright__div {
@@ -501,6 +524,7 @@ footer {
 @media screen and (max-width: 700px) {
 
     .footer {
+        display: none;
         position: static;
         height: unset;
     }
@@ -512,5 +536,15 @@ footer {
     .footer__main > .footer__links {
         flex-direction: column;
     }
+
+    .footer__mobile {
+        display: block;
+    }
+
+    .footerMobile__container {
+        display: block;
+    }
+
+    
 
 }

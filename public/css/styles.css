@@ -107,7 +107,7 @@ button {
 
 .home__container {
     max-width: 1200px;
-    margin: 6.25rem auto;
+    margin: 13.25rem auto;
     display: grid;
     grid-template-columns: 2fr 1fr;
     justify-content: center;
@@ -177,7 +177,7 @@ h2 {
     top: 0;
 }
 
-footer {
+.footer {
     max-width: 1200px;
     margin: auto;
     height: 20vh;

@@ -47,26 +47,26 @@
             return (
                 "undefined" != typeof e.label
                     ? ((r.element = document.createElementNS(N, "text")),
-                      r.element.setAttribute("x", 0),
-                      r.element.setAttribute("y", 0),
-                      r.element.setAttribute("fill", x.fontColor),
-                      r.element.setAttribute("font-family", x.fontFamily),
-                      r.element.setAttribute("font-size", x.fontSize),
-                      r.element.setAttribute("font-weight", x.fontWeight),
-                      r.element.setAttribute("font-style", x.fontStyle),
-                      r.element.setAttribute("font-stretch", x.fontStretch),
-                      r.element.setAttribute("text-anchor", "middle"),
-                      (r.element.textContent = x.fontToUpperCase ? e.label.toUpperCase() : e.label))
+                        r.element.setAttribute("x", 0),
+                        r.element.setAttribute("y", 0),
+                        r.element.setAttribute("fill", x.fontColor),
+                        r.element.setAttribute("font-family", x.fontFamily),
+                        r.element.setAttribute("font-size", x.fontSize),
+                        r.element.setAttribute("font-weight", x.fontWeight),
+                        r.element.setAttribute("font-style", x.fontStyle),
+                        r.element.setAttribute("font-stretch", x.fontStretch),
+                        r.element.setAttribute("text-anchor", "middle"),
+                        (r.element.textContent = x.fontToUpperCase ? e.label.toUpperCase() : e.label))
                     : "undefined" != typeof e.image &&
-                      ((r.element = document.createElementNS(N, "image")),
-                      r.element.setAttribute("x", 0),
-                      r.element.setAttribute("y", 0),
-                      r.element.setAttribute("width", e.width),
-                      r.element.setAttribute("height", e.height),
-                      r.element.setAttribute("id", "image_" + t),
-                      r.element.setAttributeNS("http://www.w3.org/1999/xlink", "href", e.image),
-                      (r.diffX = e.width / 2),
-                      (r.diffY = e.height / 2)),
+                    ((r.element = document.createElementNS(N, "image")),
+                        r.element.setAttribute("x", 0),
+                        r.element.setAttribute("y", 0),
+                        r.element.setAttribute("width", e.width),
+                        r.element.setAttribute("height", e.height),
+                        r.element.setAttribute("id", "image_" + t),
+                        r.element.setAttributeNS("http://www.w3.org/1999/xlink", "href", e.image),
+                        (r.diffX = e.width / 2),
+                        (r.diffY = e.height / 2)),
                 (r.link = document.createElementNS(N, "a")),
                 r.link.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", e.url),
                 r.link.setAttribute("target", e.target),
@@ -122,9 +122,9 @@
         function f(t) {
             t.tooltip &&
                 (w.setAttribute("x", t.vector2D.x - x.tooltipDiffX),
-                w.setAttribute("y", t.vector2D.y - x.tooltipDiffY),
-                (w.textContent = x.tooltipFontToUpperCase ? t.tooltipLabel.toUpperCase() : t.tooltipLabel),
-                w.setAttribute("opacity", 1));
+                    w.setAttribute("y", t.vector2D.y - x.tooltipDiffY),
+                    (w.textContent = x.tooltipFontToUpperCase ? t.tooltipLabel.toUpperCase() : t.tooltipLabel),
+                    w.setAttribute("opacity", 1));
         }
         function d(t) {
             w.setAttribute("opacity", 0);
@@ -238,14 +238,14 @@
     window.SVG3DTagCloud = t;
 })(),
     "undefined" != typeof jQuery &&
-        !(function (t) {
-            t.fn.svg3DTagCloud = function (e) {
-                var o = arguments;
-                return this.each(function () {
-                    if (t.data(this, "plugin_SVG3DTagCloud")) {
-                        var i = t.data(this, "plugin_SVG3DTagCloud");
-                        i[e] ? i[e].apply(this, Array.prototype.slice.call(o, 1)) : t.error("Method " + e + " does not exist on jQuery.svg3DTagCloud");
-                    } else t.data(this, "plugin_SVG3DTagCloud", new SVG3DTagCloud(this, e));
-                });
-            };
-        })(jQuery);
+    !(function (t) {
+        t.fn.svg3DTagCloud = function (e) {
+            var o = arguments;
+            return this.each(function () {
+                if (t.data(this, "plugin_SVG3DTagCloud")) {
+                    var i = t.data(this, "plugin_SVG3DTagCloud");
+                    i[e] ? i[e].apply(this, Array.prototype.slice.call(o, 1)) : t.error("Method " + e + " does not exist on jQuery.svg3DTagCloud");
+                } else t.data(this, "plugin_SVG3DTagCloud", new SVG3DTagCloud(this, e));
+            });
+        };
+    })(jQuery);

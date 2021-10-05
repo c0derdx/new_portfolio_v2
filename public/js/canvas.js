@@ -34,7 +34,7 @@ var settings = {
     fov: 800,
     speed: 1,
     fontFamily: 'Oswald, Arial, sans-serif',
-    fontSize: '15',
+    fontSize: '20',
     fontColor: '#F54D71',
     fontWeight: 'normal',//bold
     fontStyle: 'normal',//italic 

@@ -12,6 +12,10 @@
     padding: 0 10px;
 }
 
+.contact__left form {
+    margin: 1rem 0 0;
+}
+
 .contact__left input {
     margin-bottom: 10px;
 }

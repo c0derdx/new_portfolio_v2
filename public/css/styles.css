@@ -28,8 +28,8 @@ body {
 .logo {
     flex: 1;
     font-size: 2.5rem;
-    background-color: #53EDFB;
-    background-image: linear-gradient(115deg, #53EDFB, #F54D71);
+    background-color: #F54D71;
+    background-image: linear-gradient(180deg,  #F54D71,#53EDFB);
     background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -180,11 +180,11 @@ h2 {
 .footer {
     max-width: 1200px;
     margin: auto;
-    height: 20vh;
-    position: absolute;
+    height: 15vh;
+    /* position: absolute;
     bottom: 0;
     right: 0;
-    left: 0;
+    left: 0; */
 }
 
 .footer__main {
@@ -261,71 +261,7 @@ h2 {
     }
 }
 
-.contact__container {
-    display: flex;
-    justify-content: space-between;
-    width: 100vw;
-    max-width: 1200px;
-    margin: auto;
-    margin-top: 6.25rem;
-    flex-wrap: wrap;
-    /* align-items: center; */
-}
 
-.contact__left {
-    width: 600px;
-    padding-right: 2%;
-}
-
-.contact__left input {
-    margin-bottom: 10px;
-}
-
-.upperForm {
-    display: flex;
-}
-
-.upperForm__right {
-    margin-left: 2%;
-}
-
-.contact__left textarea {
-    min-height: 150px;
-    max-width: 100%;
-    min-width: 100%;
-    max-height: 150px;
-    outline: none;
-    font-size: 1.25rem;
-    width: 100%;
-    border: 0;
-    background: #2b2b2b;
-    height: 50px;
-    font-size: 16px;
-    color: #74809C;
-    padding: 20px;
-}
-
-.contact__right {
-    width: 600px;
-    background-color: #bfbed1;
-}
-
-.contact__container input {
-    outline: none;
-    font-size: 1.25rem;
-    width: 100%;
-    border: 0;
-    background: #2b2b2b;
-    height: 50px;
-    font-size: 16px;
-    color: #74809C;
-    padding: 0 20px;
-    /* text-transform: uppercase; */
-}
-
-.form__send {
-    margin: 10px 0;
-}
 
 @media only screen and (max-width: 1200px) {
 

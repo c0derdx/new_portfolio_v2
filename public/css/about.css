@@ -1,6 +1,8 @@
 .about__container {
     display: flex;
-    justify-content: center;
+    max-width: 1200px;
+    margin: 8.25rem auto;
+    align-items: center;
 }
 
 h1 {
@@ -9,6 +11,7 @@ h1 {
 
 .about__left {
     width: 50%;
+    padding-left: 10px;
 }
 
 h3 {
@@ -88,4 +91,30 @@ span.about__heading:hover {
 
 .about__left a:hover {
     color: #CE3D5C;
+}
+
+.about__right {
+    width: 50%;
+    display: grid;
+    place-content: center;
+    overflow: hidden;
+}
+
+.about__right a:hover {
+    cursor:default;
+}
+
+@media only screen and (max-width: 900px) {
+    .about__container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .about__left {
+        width: 100%;
+    }
+
+    .about__right {
+        width: 100%;
+    }
 }

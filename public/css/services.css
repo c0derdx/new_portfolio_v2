@@ -24,12 +24,13 @@
 .services__card {
     position: relative;
     overflow: hidden;
-    width: 300px;
+    width: 250px;
     height:400px;
     background-color: #161253;
     display: flex;
     justify-content: center;
     margin: 10px;
+    border-radius: 10px;
     /* align-items: center; */
 }
 

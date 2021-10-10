@@ -1,14 +1,25 @@
 <%-include("partials/projectsHeader")-%>
+<div class="projects__heading">
+    <span href="#" class="rubber__heading">P</span>
+    <span href="#" class="rubber__heading">r</span>
+    <span href="#" class="rubber__heading">o</span>
+    <span href="#" class="rubber__heading">j</span>
+    <span href="#" class="rubber__heading">e</span>
+    <span href="#" class="rubber__heading">c</span>
+    <span href="#" class="rubber__heading">t</span>
+    <span href="#" class="rubber__heading">s</span>
+</div>
 <div class="projects__container">
-    <% projects.forEach(function(project) {%>
-        <a href="" class="project">
+    <% projects.reverse().forEach(function(project) {%>
+        <div class="project">
             <img src= "<%=project.image %>"  alt="">
-            <div class="project__info">
+            <div class="project__hoverDiv">
                 <h3><%= project.title%></h3>
                 <p><%= project.content%></p>
+                <a href="<%= project.url%>" class="project__link">Check out the website</a>
             </div>
         
-        </a>
+        </div>
     <% }) %>
 </div>
 <%-include("partials/footer")-%>

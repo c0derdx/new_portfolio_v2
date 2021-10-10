@@ -2,12 +2,16 @@
 <h1>Compose</h1>
 <div class="composer__container">
   <div class="projects__container">
-    <% projects.forEach(function(project) {%>
+    <% projects.reverse().forEach(function(project) {%>
       <a href="<%= project.url%>" class="project">
           <img src= "<%=project.image %>"  alt="">
           <div class="project__info">
               <h3><%= project.title%></h3>
               <p><%= project.content%></p>
+              <div class="project__hoverDiv">
+                <h3><%= project.title%></h3>
+                <p><%= project.content%></p>
+            </div>
               <form action="/delete" method="POST">
                 <button class="delete" name="deleteBtn" type="submit" value="<%=project._id%>">delete</button>
               </form>

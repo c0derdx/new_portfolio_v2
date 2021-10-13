@@ -1,7 +1,7 @@
 .about__container {
     display: flex;
     max-width: 1200px;
-    margin: 8.25rem auto;
+    margin: 5.25rem auto;
     align-items: center;
 }
 
@@ -64,8 +64,24 @@ canvas {
     }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1200px) {
     .about__left {
         padding-left: 10px;
+    }
+}
+
+@media only screen and (min-height: 980px) and (max-height: 1400px) {
+    .navbar {
+        height: 5vh;
+    }
+
+    .footer {
+        height: 10vh;
+    }
+
+    .about__container {
+        height: 85vh;
+        align-items: center;
+        margin: 0 auto;
     }
 }

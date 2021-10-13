@@ -103,3 +103,9 @@ h4 {
     transform: translateY(0px);
     transition-delay: 0.30s;
 }
+
+@media only screen and (max-height: 1400px) {
+    .services__container {
+        margin-bottom: 8rem;
+    }
+}

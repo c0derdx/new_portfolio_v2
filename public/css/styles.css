@@ -21,7 +21,7 @@ body {
     padding-top: 20px;
     display: flex;
     flex-direction: row;
-    height: 80px;
+    height: 60px;
     align-items: center;
     color: #F54D71;
     width: 100%;
@@ -113,7 +113,7 @@ button::before {
 }
 
 button {
-    padding: 10px 30px;
+    padding: 10px 20px;
     outline: none;
     color: #F54D71;
     border: 1.5px solid #F54D71;
@@ -127,7 +127,7 @@ button {
 
 button:hover {
     color: #14104B;
-    transition-delay: 0.5s;
+    transition-delay: 0.1s;
 }
 
 button:hover::before{
@@ -136,7 +136,7 @@ button:hover::before{
 
 .home__container {
     max-width: 1200px;
-    margin: 16rem auto;
+    margin: 11rem auto;
     display: grid;
     grid-template-columns: 2fr 1fr;
     justify-content: center;
@@ -210,7 +210,6 @@ h2 {
     width: 100%;
     margin: auto;
     /* height: 15vh; */
-    background-color: #14104B;
 }
 
 .footer__main {
@@ -261,52 +260,6 @@ h2 {
     animation: float 4s linear infinite;
 }
 
-@keyframes rotation {
-    from {
-        transform: rotate3d(-2, 1, 1, 0deg);
-    }
-    to {
-        transform: rotate3d(2, 3, 1, 360deg);
-    }
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
-}
-
-@keyframes hover {
-    from {
-        width: 0%;
-    }
-    to {
-        width: 30%;
-    }
-}
-
-
-
-@media only screen and (max-width: 1200px) {
-
-    .logo {
-        margin-left: 10px;
-    }
-
-    .navbar button {
-        margin-right: 10px;
-    }
-
-    .home__container {
-        padding: 0 10px;
-    }
-}
 
 
 .nav-mobile {
@@ -424,6 +377,21 @@ h2 {
     margin: 10px 0;
 }
 
+/* @media only screen and (max-width: 1200px) {
+
+    .logo {
+        margin-left: 10px;
+    }
+
+    .navbar button {
+        margin-right: 10px;
+    }
+
+    .home__container {
+        padding: 0 10px;
+    }
+}
+
 @media screen and (max-width: 1050px) {
 
     .copyright__div {
@@ -515,6 +483,16 @@ h2 {
     }
 }
 
+@media screen and (max-width: 480px) {
+    .home__container {
+        margin: 11rem auto;
+    }
+
+    .rubber__heading {
+        
+    }
+} */
+
 /* Rubberband animation */
 
 span.rubber__heading {
@@ -540,6 +518,122 @@ span.rubber__heading:hover {
     width: 0.85rem;
 }
 
+@media only screen and (max-width: 1200px) {
+
+    .logo {
+        margin-left: 10px;
+    }
+
+    .navbar button {
+        margin-right: 10px;
+    }
+
+    .home__container {
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+
+    .copyright__div {
+        width: 50%;
+    }
+    
+}
+
+@media screen and (max-width: 1000px) {
+    
+    .home__container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    
+}
+
+@media screen and (max-width: 900px) {
+    
+    .navbar {
+        padding: 10px 10px 0 10px;
+        height: 60px;
+    }
+
+    .logo {
+        margin: 0;
+    }
+    
+    .hamburger {
+        display: block;
+        font-size: 2rem;
+        align-self: center;
+        margin-top: 0.3rem;
+    }
+    
+    .nav-mobile {
+        display: flex;
+    }
+    
+    .navbar>.navbar__links{
+        display: none;
+    }
+    
+    .home__left h1 {
+        font-size: 3rem;
+    }
+    
+    .home__left h2 {
+        font-size: 2rem;
+    }
+
+    .footer__main > .footer__links {
+        font-size: 1rem;
+    }
+    
+    .footer__main .footer__links li {
+        margin: 0 10px;
+    }
+
+    .copyright__div {
+        width: 60%;
+        font-size: 0.95rem;
+    }
+    
+}
+
+@media screen and (max-width: 700px) {
+
+    .footer {
+        display: none;
+        position: static;
+        height: unset;
+    }
+
+    .footer__main {
+        height: unset;
+    }
+
+    .footer__main > .footer__links {
+        flex-direction: column;
+    }
+
+    .footer__mobile {
+        display: block;
+    }
+
+    .footerMobile__container {
+        display: block;
+    }
+    
+    span.rubber__heading {
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    span.rubber__heading {
+        font-size: 3.5rem;
+    }
+}
+
 @keyframes rubberBand {
     from {
         transform: scale3d(1, 1, 1);
@@ -561,5 +655,35 @@ span.rubber__heading:hover {
     }
     to {
         transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate3d(-2, 1, 1, 0deg);
+    }
+    to {
+        transform: rotate3d(2, 3, 1, 360deg);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes hover {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 30%;
     }
 }

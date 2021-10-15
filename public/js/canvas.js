@@ -1,22 +1,20 @@
 var entries = [ 
 
-    { label: 'Back to top'},
-    { label: 'html'},
+    { label: 'HTML'},
     { label: 'CSS'},
-    { label: 'CSS'},
-    { label: 'CSS'},
-    { label: 'CSS'},
-    { label: 'CSS'},
-    { label: 'CSS'},
-    { label: 'CSS'},
-    { label: 'CSS'},
-    { label: 'CSS'},
-    { label: 'CSS'},
-    { label: 'CSS'},
-    { label: 'CSS'},
-    { label: 'CSS'},
-    { label: 'Countdown'},
-    { label: 'Dropdown'}
+    { label: 'JavaScript'},
+    { label: 'NodeJs'},
+    { label: 'MongoDB'},
+    { label: 'EJS'},
+    { label: 'JQuery'},
+    { label: 'BootStrap'},
+    { label: 'PHP'},
+    { label: 'ReactJs'},
+    { label: 'C'},
+    { label: 'C++'},
+    { label: 'Java'},
+    { label: 'TailwindCSS'},
+    { label: 'Wordpress'},
 ];
 
 var settings = {
@@ -39,7 +37,7 @@ var settings = {
     fontWeight: 'normal',//bold
     fontStyle: 'normal',//italic 
     fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
-    fontToUpperCase: true,
+    fontToUpperCase: false,
     tooltipFontFamily: 'Oswald, Arial, sans-serif',
     tooltipFontSize: '11',
     tooltipFontColor: '#fff',

@@ -1,16 +1,16 @@
 <%-include("partials/contactHeader")-%>
 <div class="contact__container">
     <div class="contact__left">
-        <span href="#" class="rubber__heading">C</span>
-        <span href="#" class="rubber__heading">o</span>
-        <span href="#" class="rubber__heading">n</span>
-        <span href="#" class="rubber__heading">t</span>
-        <span href="#" class="rubber__heading">a</span>
-        <span href="#" class="rubber__heading">c</span>
-        <span href="#" class="rubber__heading">t</span>
+        <span class="rubber__heading">C</span>
+        <span class="rubber__heading">o</span>
+        <span class="rubber__heading">n</span>
+        <span class="rubber__heading">t</span>
+        <span class="rubber__heading">a</span>
+        <span class="rubber__heading">c</span>
+        <span class="rubber__heading">t</span>
         <span class="span__gap"></span>
-        <span href="#" class="rubber__heading">M</span>
-        <span href="#" class="rubber__heading">e</span>
+        <span class="rubber__heading">M</span>
+        <span class="rubber__heading">e</span>
         <form action="" method="post">
             <li class="upperForm">
             <input name="name" placeholder="Name" type="text" class="upperForm__left" autocomplete="off" required>
@@ -19,11 +19,11 @@
             <li><input name="email" placeholder="Email" type="email" autocomplete="off" required></li>
             <li><input name="subject" placeholder="Subject" type="text" autocomplete="off" required></li>
             <li><textarea name="message" placeholder="Message" id="" cols="30" rows="10" autocomplete="off" required></textarea></li>
-            <button type="submit" id="form__Send" class="form__send">Send message!</button>
+            <button type="submit" id="form__Send" class="form__send"><%= emailStatus %></button>
         </form>
     </div>
     <div class="contact__right">
         <img class="letter__img" src="/images/—Pngtree—messege mail box 3d rendering_6322301.png" alt="">
     </div>
 </div>
-    <%-include("partials/footer")-%>
+    <%-include("partials/contactFooter")-%>

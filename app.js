@@ -4,6 +4,7 @@ const { Schema } = mongoose;
 const ejs = require("ejs");
 const { forEach } = require("lodash");
 const _ = require("lodash");
+const nodemailer = require("nodemailer");
 
 const app = express();
 
@@ -39,6 +40,17 @@ const contactSchema = new Schema({
 
 const Contact = mongoose.model('Contact', contactSchema);
 
+var transporter = nodemailer.createTransport({
+    host: "smtp.mailtrap.io",
+    port: 2525,
+    auth: {
+        user: "847b299e7208e3",
+        pass: "02bf807e306f17"
+    }
+});
+
+var emailStatus = "Send message!";
+
 app.get("/", (req, res) => {
     res.render("home");
 });
@@ -47,6 +59,8 @@ app.get("/projects", async (req, res) => {
     await Project.find({}, function (err, foundItems) {
         if (err) console.log(err);
         else res.render("projects", { projects: foundItems });
+    }).catch((err) => {
+        console.log("Promise Rejected");
     });
 });
 
@@ -59,17 +73,17 @@ app.get("/about", (req, res) => {
 });
 
 app.get("/contact", (req, res) => {
-    res.render("contact");
+    res.render("contact",{ emailStatus : emailStatus });
 });
 
-app.post("/contact", (req,res)=>{
+app.post("/contact", async (req, res) => {
     const name = req.body.name;
     const contact = req.body.contact;
     const email = req.body.email;
     const subject = req.body.subject;
     const message = req.body.message;
 
-    const contactInfo = new Contact ({
+    const contactInfo = new Contact({
         name: name,
         contact: contact,
         email: email,
@@ -77,9 +91,36 @@ app.post("/contact", (req,res)=>{
         message: message
     });
 
+    const output = `<p>You Have a new Email</p>
+    <li>Name: ${name}</li>
+    <li>Contact: ${contact}</li>
+    <li>Email: ${email}</li>
+    <li>Subject: ${subject}</li>
+    <li>Message: ${message}</li>`
+
+    var mailOptions = {
+        from: "Nodemailer Contact " + email,
+        to: 'myfriend@yahoo.com',
+        subject: 'Someone sent Contact on your website',
+        text: 'View the html part',
+        html: output
+    };
+
+    await transporter.sendMail(mailOptions, function (error, info) {
+        if (error) {
+            console.log(error);
+            emailStatus = "not sent";
+        } else {
+            console.log('Email sent: ' + info.response);
+            emailStatus = "Email Sent";
+        }
+    });
+    
     contactInfo.save();
-    res.redirect("/contact");
-})
+    setTimeout(() => {
+        res.redirect("/contact");        
+    }, 8000);
+});
 
 app.get("/deathcomposer", async (req, res) => {
     // res.render("deathcomposer"); old code
@@ -122,9 +163,9 @@ app.post("/deathcomposer", function (req, res) {
 //     });
 // });
 
-app.post("/delete", async (req,res) => {
+app.post("/delete", async (req, res) => {
     const deleteProjectId = req.body.deleteBtn;
-    await Project.findByIdAndRemove(deleteProjectId, (err) =>{
+    await Project.findByIdAndRemove(deleteProjectId, (err) => {
         if (!err) {
             console.log("successfully deleted");
             res.redirect("/deathcomposer");

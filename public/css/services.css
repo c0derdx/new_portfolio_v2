@@ -93,9 +93,9 @@ h4 {
 .card__button {
     margin: 5px;
     opacity: 0;
-    transition: 0.5s;
-    transition-delay: -0.30s;
+    transition: transform 0.5s ease -0.3s;
     transform: translateY(50px);
+    padding: 10px 20px;
 }
 
 .services__card:hover .card__button{

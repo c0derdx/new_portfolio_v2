@@ -68,3 +68,9 @@ p {
 .project__link:hover {
     text-decoration: underline;
 }
+
+@media only screen and (max-width: 1200px) {
+    .projects__container {
+        padding: 0 10px;
+    }
+}

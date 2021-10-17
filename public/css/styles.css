@@ -186,12 +186,12 @@ h2 {
     justify-content: space-between;
 }
 
-.social__bar a:hover .icons, .footer__social a:hover .icons {
+.social__bar a:hover .icons, .footer__social a:hover .icons, .footerSocial__mobile a:hover .icons {
     color: #F54D71;
 }
 
 .socialBar__icons {
-    rotate: 90deg;
+    transform: rotate(90deg);
 }
 
 .icons {
@@ -461,6 +461,44 @@ span.rubber__heading:hover, span.rubber__heading:active {
     width: 0.85rem;
 }
 
+.loader__container{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: #14104B;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.loader {
+    width: 100px;
+}
+
+.loader__logo {
+    font-size: 4rem;
+    align-self: center;
+    background-image: linear-gradient(180deg,  #F54D71,#53EDFB);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-size: 131px;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-family: 'Patua One', cursive;
+}
+
+.loading__line {
+    height: 2px;
+    background-color: #F54D71;
+    animation: width 2s infinite;
+    transform-origin: initial;
+    width: 0;
+}
+
 @media only screen and (max-width: 1200px) {
 
     .logo {
@@ -628,5 +666,14 @@ span.rubber__heading:hover, span.rubber__heading:active {
     }
     to {
         width: 30%;
+    }
+}
+
+@keyframes width {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
     }
 }

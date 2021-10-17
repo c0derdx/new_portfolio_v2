@@ -172,6 +172,8 @@ app.post("/delete", async (req, res) => {
         } else {
             console.log(err);
         }
+    }).catch((err) => {
+        console.log("Promise Rejected");
     });
 });
 

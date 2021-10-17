@@ -1,3 +1,4 @@
+let loaderContainer = document.querySelector(".loader__container");
 
 let x = document.querySelector(".hamburger");
 var y = document.querySelector(".nav-mobile");
@@ -6,6 +7,10 @@ var bar1 = document.querySelector(".bar1")
 var bar2 = document.querySelector(".bar2")
 var bar3 = document.querySelector(".bar3")
 let mobileLinks = document.querySelectorAll(".mobile-links");
+
+window.addEventListener("load", () => {
+    loaderContainer.parentElement.removeChild(loaderContainer);
+});
 
 x.addEventListener("click", () => {
     y.classList.toggle("toggleNav");
